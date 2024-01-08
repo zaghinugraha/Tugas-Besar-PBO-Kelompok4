@@ -1,0 +1,21 @@
+buat db di mysql job_portal_system;
+
+create table resume(
+company_email_id Varchar(40) not null,
+jobseeker_email_id Varchar(40) not null
+);
+
+create table company(
+name Varchar(45) not null,
+email_id Varchar(40) primary key,
+password Varchar(13) not null,
+contact_no Varchar(10) not null,
+percentage Int not null);
+
+create table jobseeker(
+name Varchar(45) not null,
+email_id Varchar(40) primary key,
+password Varchar(13) not null,
+contact_no Varchar(10) not null,
+percentage Int not null,
+resume blob not null);
